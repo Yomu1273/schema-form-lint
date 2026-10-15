@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "firstName": { "type": "string" },
+    "age": { "type": "integer" },
+    "sessionToken": { "type": "string" },
+    "newsletter": { "type": "boolean" }
+  },
+  "required": ["firstName", "sessionToken"]
+}

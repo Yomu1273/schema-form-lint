@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "claimType": { "type": "string", "enum": ["warranty", "goodwill"] },
+    "underWarranty": { "type": "boolean" },
+    "serialNumber": { "type": "string" },
+    "failureDescription": { "type": "string" },
+    "goodwillReason": { "type": "string" }
+  },
+  "required": ["claimType", "serialNumber", "goodwillReason", "purchaseDate"]
+}
