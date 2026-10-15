@@ -1,0 +1,28 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    { "type": "Control", "scope": "#/properties/claimType" },
+    { "type": "Control", "scope": "#/properties/underWarranty" },
+    {
+      "type": "Control",
+      "scope": "#/properties/serialNumber",
+      "rule": {
+        "effect": "SHOW",
+        "condition": { "scope": "#/properties/underWarranty", "schema": { "const": "true" } }
+      }
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/failureDescripton"
+    },
+    {
+      "type": "Group",
+      "label": "Goodwill",
+      "rule": {
+        "effect": "SHOW",
+        "condition": { "scope": "#/properties/claimType", "schema": { "const": "Goodwill" }, "failWhenUndefined": true }
+      },
+      "elements": [{ "type": "Control", "scope": "#/properties/goodwillReason" }]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "ui:order": ["firstName", "lastName", "age", "sessionToken"],
+  "fristName": { "ui:autofocus": true },
+  "age": { "ui:widget": "textarea" },
+  "sessionToken": { "ui:widget": "hidden" }
+}

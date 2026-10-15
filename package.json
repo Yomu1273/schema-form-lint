@@ -1,0 +1,61 @@
+{
+  "name": "schema-form-lint",
+  "version": "0.0.0",
+  "description": "Static checks for JSON Forms and react-jsonschema-form configs. Catches required-but-hidden fields, impossible rule conditions, and dead uiSchema keys before your users do.",
+  "license": "MIT",
+  "author": "Yomu1273",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "schema-form-lint": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check:package": "publint && attw --pack . --profile node16",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build && npm run check:package"
+  },
+  "keywords": [
+    "jsonforms",
+    "json-forms",
+    "rjsf",
+    "react-jsonschema-form",
+    "json-schema",
+    "uischema",
+    "forms",
+    "lint",
+    "static-analysis"
+  ],
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@types/node": "^20.19.43",
+    "publint": "^0.3.25",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
