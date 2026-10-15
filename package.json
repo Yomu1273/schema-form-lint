@@ -1,9 +1,17 @@
 {
   "name": "schema-form-lint",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Static checks for JSON Forms and react-jsonschema-form configs. Catches required-but-hidden fields, impossible rule conditions, and dead uiSchema keys before your users do.",
   "license": "MIT",
   "author": "Yomu1273",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yomu1273/schema-form-lint.git"
+  },
+  "homepage": "https://github.com/Yomu1273/schema-form-lint#readme",
+  "bugs": {
+    "url": "https://github.com/Yomu1273/schema-form-lint/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
